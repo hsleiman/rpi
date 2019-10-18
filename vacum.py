@@ -3,6 +3,9 @@ import logging
 
 logger = logging.getLogger('vacum pump')
 file_log_handler = logging.FileHandler('/home/pi/log/vacum_pump_'+str(datetime.datetime.now())+'.log')
+logger.addHandler(file_log_handler)
+
+
 stderr_log_handler = logging.StreamHandler()
 logger.addHandler(stderr_log_handler)
 
