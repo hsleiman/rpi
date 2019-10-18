@@ -1,11 +1,11 @@
 #!/bin/bash
 
 LOG_DIR="/home/pi/log"
-mkdir -p $(LOG_DIR)
-echo "Creating logging dir "$(LOG_DIR)
+mkdir -p $LOG_DIR
+echo "Creating logging dir "$LOG_DIR
 
-LOG_FILE = $(LOG_DIR)/temp_$(date).log
-touch $(LOG_FILE)
+LOG_FILE = ($LOG_DIR)/temp_$(date).log
+touch $LOG_FILE
 echo "Creating Logging file "$(LOG_FILE)
 
 while true; do
