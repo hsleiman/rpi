@@ -11,6 +11,8 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 file_log_handler.setFormatter(formatter)
 stderr_log_handler.setFormatter(formatter)
 
+logger.setLevel('DEBUG')
+
 var = 1
 while var == 1 :  # This constructs an infinite loop
         
@@ -19,7 +21,7 @@ while var == 1 :  # This constructs an infinite loop
 	GPIO.setmode(GPIO.BCM)
 	GPIO.setwarnings(False)
 	GPIO.setup(18,GPIO.OUT)
-        print "-----------------------------------------------"
+	print "-----------------------------------------------"
 	logger.info('Vacum on at ' + str(datetime.datetime.now()))
 	GPIO.output(18,GPIO.HIGH)
 	time.sleep(10)
