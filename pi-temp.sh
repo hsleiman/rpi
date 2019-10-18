@@ -1,11 +1,12 @@
 #!/bin/bash
 
 LOG_DIR = /home/pi/log
-LOG_FILE = /home/pi/log/temp_$(date).log
 mkdir -p $LOG_DIR
-touch $LOG_FILE
+echo "Creating logging dir "$LOG_DIR
 
-exec 3>&1 1>>$LOG_FILE 2>&1
+LOG_FILE = /home/pi/log/temp_$(date).log
+touch $LOG_FILE
+echo "Creating Logging file "$LOG_FILE
 
 while true; do
 echo "-------------------------------------------"
