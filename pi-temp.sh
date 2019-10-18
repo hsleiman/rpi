@@ -4,7 +4,9 @@ LOG_DIR="/home/pi/log"
 mkdir -p $LOG_DIR
 echo "Creating logging dir "$LOG_DIR
 
-LOG_FILE=$LOG_DIR"/temp_"$date".log"
+current_time=$(date "+%Y.%m.%d-%H.%M.%S")
+
+LOG_FILE=$LOG_DIR"/temp_log".$current_time
 touch $LOG_FILE
 echo "Creating Logging file "$LOG_FILE
 
