@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_DIR = /home/pi/log
+LOG_DIR = "/home/pi/log"
 mkdir -p $(LOG_DIR)
 echo "Creating logging dir "$(LOG_DIR)
 
