@@ -25,10 +25,10 @@ while var == 1 :  # This constructs an infinite loop
 	GPIO.setwarnings(False)
 	GPIO.setup(18,GPIO.OUT)
 	print "-----------------------------------------------"
-	logger.info('Vacum on at ' + str(datetime.datetime.now()))
+	logger.info('Vacum Turned On')
 	GPIO.output(18,GPIO.HIGH)
 	time.sleep(10)
-	logger.info('Vacum off at ' +  str(datetime.datetime.now()))
+	logger.info('Vacum Turned Off')
 	GPIO.output(18,GPIO.LOW)
 	time.sleep(300)
 	
